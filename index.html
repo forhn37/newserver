@@ -13,6 +13,7 @@
     a {
       color: rgb(3, 3, 66);
       font-size: 25px;
+      text-decoration-line: none;
     }
     ul {
       display: flex;
@@ -23,7 +24,11 @@
       text-align: center;
       margin-top: 40px;
       font-size: 60px;
-      font-style: italic;
+      color: rgb(21, 21, 99);
+    }
+    img {
+      width: 200px;
+      height: 200px;
     }
   </style>
 </head>
@@ -38,6 +43,30 @@
       <a href = "localhost:5050/sub">윤준현😫</a>
       <a href = "localhost:5050/sub">이민구🤬</a>
     </ul>
+    <ul>
+      <img src="pokemonpicture/014901.png">
+      <img src="pokemonpicture/000401.png">
+      <img src="pokemonpicture/002501.png">
+      <img src="pokemonpicture/013301.png">
+      <img src="pokemonpicture/005201.png">
+      <img src="pokemonpicture/045301.png">
+    </ul>
   </div>
+  <script>
+    let ancor = document.getElementsByTagName("a");
+    
+    for(let i=0; i<ancor.length; i++) {
+      ancor[i].addEventListener('click',function() {
+        let img = document.getElementsByTagName('img')
+          img[i].style.width = "300%"
+          img[i].style.height = "300%"
+          setTimeout(function() {
+            img[i].style.width = "200px"
+            img[i].style.height = "200px"
+          }, 200)
+      }
+      )
+    }
+  </script>
 </body>
 </html>
