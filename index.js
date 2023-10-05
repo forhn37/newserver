@@ -55,9 +55,11 @@ http.createServer(function(request, response) {
             color: #111;
           }
           </style>
+          </head>
           <body>
+          <div id="root">
           <h1>
-            우리가족 <a href="http://localhost5050">홈페이지</a> 
+            우리가족 <a href="localhost5050/sub">홈페이지</a> 
           </h1>
           <ul>
             <li>김현</li>
